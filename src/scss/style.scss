@@ -1,0 +1,241 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: Helvetica;
+}
+.container{
+	max-width: 100%;
+	padding: 0;
+  .left-col, .right-col {
+    position: absolute;
+    width: 50%;
+    height: 100vh;
+  }
+  .play, .next ion-icon{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    opacity: .8;
+    border-radius: 50%;
+    border: 1px solid rgba(255,255,255,.3);
+    padding: 2em;
+  }
+  #name{
+    font-weight: bolder;
+  }
+  #artist{
+    font-size: 10px;
+  }
+  .left-col{
+    background: #F52B1F;
+    .block-cover{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 45%;
+      height: 50%;
+      &::after{
+          content:'';
+          top: 0;
+          left: 0;
+          position: absolute;
+          width:  0%;
+          height: 100%;
+          background: #4f4538;
+          animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+          animation-delay: 1s;
+        }
+    }
+    .logo {
+      font-family: inherit;
+      color: #fff;
+      position: fixed;
+      z-index: 1;
+      margin: 1.4em;
+      font-weight: bold
+    }
+    .year {
+       position: absolute;
+       color: #000;
+       font-family: inherit;
+       bottom: 8%;
+       font-weight: bolder;
+       transform: rptate(-90deg);
+       left: 0%;
+    }
+    .buy{
+      color: #f4c8ad;
+      font-family: inherit;
+      text-transform: uppercase;
+      position: absolute;
+      right: 0%;
+      top: -2.6%;
+      margin: 1.4em;
+    }
+    .cover {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      width: 40%;
+      height: 50%;
+      background: url(../../images/parson.jpg) no-repeat 50% 50%;
+      background-size: cover;
+      opacity: 0;
+      animation: appear-text 0.0001s linear forwards;
+      animation-delay: 1.4s;
+    }
+    .data {
+      position: absolute;
+      top: 30%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      font-family: inherit;
+      color: #eee;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    @media(max-width: 900px) {
+      width: 100%;
+    }
+  }
+  .right-col{
+      left: 50%;
+      .upper{
+        position: absolute;
+        width: 100%;
+        height: 50vh;
+        background: #4f4538;
+        opacity: 0;
+        animation: appear-text 0.0001s linear forwards;
+        animation-delay: 3s;
+      .about{
+        position: absolute;
+        top: 40%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        text-transform: uppercase;
+        span:hover{
+          text-decoration: underline;
+          cursor: pointer;
+        }
+        h1{
+          font-weight: bolder;
+          color: #6f6457;
+          font-family: inherit;
+        }
+      }
+      .media{
+        margin-top: 30px;
+        ul{
+          position: absolute;
+          bottom: -20%;
+          left: -25%;
+          list-style: none;
+          li{
+            display: inline-block;
+            margin-left: 15px;
+          }
+        }
+      }
+    }
+    .upper-block{
+      width: 100%;
+      height: 50vh;
+      display: block;
+      &::after{
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+        width:  0%;
+        height: 50%;
+        background: #000;
+        animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+        animation-delay: 2.4s;
+      }
+      .bottom{
+        position: absolute;
+        top: 50%;
+        height: 50vh;
+        width: 100%;
+        background: url(../../images/bottom.jpg) no-repeat 50% 50%;
+        background-size: cover;
+        opacity: 0;
+        animation: appear-text 0.0001s linear forwards;
+        animation-delay: 4s;
+      .next {
+        position: absolute;
+        top: 24%;
+        left: 16%;
+        }
+
+      .data2{
+          position: absolute;
+          top: 15%;
+          left: 28%;
+          font-family: inherit;
+          color: #111;
+          text-transform: uppercase;
+          letter-spacing: 4px;
+        }
+        .more{
+          color: #111;
+          font-family: inherit;
+          text-transform: uppercase;
+          position: absolute;
+          top: 80%;
+          left: 30%;
+      }
+     }
+     .block-bottom{
+       top: 50%;
+       height: 50vh;
+       width: 100%;
+       &::after{
+         content: '';
+         top: 0;
+         left: 0;
+         position: absolute;
+         width:  0%;
+         height: 100%;
+         background: #111;
+         animation: rev-block 1.5s cubic-bezier(0.19, 1, 0.22, 1) forwards;
+         animation-delay: 3.6s;
+       }
+     }
+    }
+      @media(max-width: 900px) {
+      top: 100%;
+      left: 0%;
+      width: 100%;
+      }
+  }
+  @keyframes appear-text {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+  }
+  @keyframes rev-block {
+   0% {
+        left: 0;
+        width: 0%;
+   }
+   50% {
+        left: 0;
+        width: 100%;
+   }
+   100% {
+        left: 100%;
+        width: 0%;
+   }
+   }
+}

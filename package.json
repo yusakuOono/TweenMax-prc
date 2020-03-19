@@ -1,0 +1,32 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/httpwwwnh/template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/httpwwwnh/template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.4",
+    "@babel/polyfill": "^7.7.0",
+    "@babel/preset-env": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-clean-css": "^4.2.0",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5",
+    "webpack": "^4.41.2",
+    "webpack-stream": "^5.2.1"
+  },
+  "description": "",
+  "dependencies": {}
+}
